@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TaxiZone</title>
+</head>
+<body>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(./imagens/Fundo.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: #ffc61a;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px;
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #ffc61a;
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ffc61a;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ffc61a;
+    border: 2px solid #ffc61a;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: #fff;
+    position: relative;
+}
+
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+}
+
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: #ffc61a;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    
+}
+
+.content .cn a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+
+.cn:hover{
+    background-color: #fff;
+}
+
+.content span{
+    color: #ffc61a;
+    font-size: 65px
+}
+
+.form{
+    width: 250px;
+    height: 380px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: -20px;
+    left: 870px;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ffc61a;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+
+.form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #ffc61a;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+}
+
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: #ffc61a;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+.btnn:hover{
+    background: #fff;
+    color: #ffc61a;
+}
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+.form .link a{
+    text-decoration: none;
+    color: #ffc61a;
+}
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    color: #fff;
+}
+.icons ion-icon{
+    color: #fff;
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.main-tariff{
+    padding: 3rem 7%;
+   
+   
+}
+.main-tariff h1{
+    font-size: 38px;
+    text-align: center;
+    padding-bottom: 6rem;
+}
+.main-tariff h1 span{
+    color: #ffc61a;
+}
+.inner-tarrif{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.tarrif-container{
+    flex: 1 1 250px;
+    text-align: center;
+    padding: 3rem 0;
+}
+.tarrif-container img{
+    width: 60%;
+    margin-top: -50px;
+}
+.tarrif-container .inner-box h2{
+    font-size: 30px;
+}
+.tarrif-container .inner-box p{
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+.tarrif-container .inner-box h3{
+    color: #ffc61a;
+    font-size: 2rem;
+}
+.tarrif-container .inner-box a{
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+
+}
+.tarrif-container:nth-child(2){
+    background: #ffc61a;
+}
+.heading-yellow{
+    color: black;
+}
+.yellw-section{
+    color: black !important;
+}
+.tarrif-container a{
+    color: white;
+    padding: 1rem 3rem;
+    background: black;
+    display: inline-block;
+    margin-top: 1rem;
+}
+.fast-booking{
+    background: url(imagens/secbg.png);
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+.fast-booking .fast-hading{
+    color: #ffc61a;
+    font-size: 38px;
+    text-align: center;
+    padding-top: 2rem;
+}
+.fast-booking  h2{
+    font-size: 31px;
+    color: white;
+    text-align: center;
+}
+.inner-fast{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 3rem 7%;
+    align-items: center;
+}
+.booking-content{
+    flex: 1 1 45rem;
+}
+.booking-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.inner-fast-text h1{
+    font-size: 22px;
+    color: #ffc61a;
+    padding: 2rem;
+}
+.inner-fast-text p{
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+.icon-fast{
+    background-color: #ffc61a;
+    width: 50px;
+    height: 40px;
+    border-radius: 150px;
+    text-align: center;
+}
+.icon-fast span i{
+    line-height: 40px;
+    font-size: 1.5rem;
+}
+
+footer  {
+background: url(imagens/secbg.png)
+}
+footer h3 {
+            color: rgb(255, 217, 0);
+            text-decoration: transparent;
+        }
+    
+        footer .ul li {
+            color: rgb(255, 217, 0);
+            text-decoration: transparent;
+        }
+</style>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">TaxiZone</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#">PÁGINA INICIAL</a></li>
+                    <li><a href="#">SERVIÇOS</a></li>
+                    <li><a href="#">SOBRE NÓS</a></li>
+                    <li><a href="#">CONTACTOS</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="escrever">
+                <a href="#"> <button class="btn">Pesquisar</button></a>
+            </div>
+
+        </div> 
+        <div class="content">
+            <h1>Qualidade & <br><span>Sergurança</span> <br>Para si</h1>
+            <p class="par">Somos a TaxiZone, uma empresa dedicada a oferecer serviços
+                 <br>de transporte personalizados e eficientes.
+                    <br>  Com uma frota moderna e motoristas altamente qualificados,
+                <br>  estamos comprometidos em garantir a segurança, conforto e pontualidade de nossos clientes.</p>
+
+                <button class="cn"><a href="#">Junta-se à nós</a></button>
+
+                <div class="form">
+                    <h2>Entar aqui</h2>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="password" name="" placeholder="Palavra-Passe">
+                    <button class="btnn"><a href="#">Entrar</a></button>
+
+                    <p class="link">Não tem uma conta?<br>
+                    <a href="#">Registrar </a> aqui</a></p>
+                    <p class="liw">Entrar com</p>
+
+                    <div class="icons">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                    </div>
+
+                </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>    
+</body>
+
+<div class="main-tariff">
+    <h1>SERV<span>IÇOS</span></h1>
+    <div class="inner-tarrif">
+        <div class="tarrif-container">
+            <div class="inner-box">
+                <img src="imagens/image1.png" alt="">
+                <h2>Classe normal</h2>
+                <p>Serviço básico com veículos confortáveis e acessíveis</p>
+                <h3>Preço: 1.500AKZ /-</h3>
+                    <li>Por km: 750AKZ</li>
+                    <li>Por minuto: 500AKZ</li>
+                <a href="#">Começar</a>
+            </div>
+        </div>
+
+        <div class="tarrif-container">
+            <div class="inner-box">
+                <img src="imagens/image2.png" alt="">
+                <h2 class="heading-yellow">Classe Executiva</h2>
+                <p>Veículos de luxo com motoristas profissionais para um serviço premium.</p>
+                    <li>Por km: 2-500AKZ</li>
+                    <li>Por minuto: 1.500AKZ</li>
+                <h3 class="yellw-section">preço:5.000AKZ /-</h3>
+                <a href="#" class="btn-yellow">Começar</a>
+            </div>
+        </div>
+
+        <div class="tarrif-container">
+            <div class="inner-box">
+                <img src="imagens/image3.png" alt="">
+                <h2>Classe Luxo</h2>
+                <p>Experiência de transporte de alto padrão com os melhores veículos disponíveis.</p>
+                <li>Por km: 15.000AKZ</li>
+                <li>Por minuto: 10.000AKZ</li>
+                <h3>price: 60.000AKZ</h3>
+                <a href="#">Começar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fast-booking">
+    <h1 class="fast-hading">SOBRE</h1>
+    <h2>NÓS</h2>
+    <div class="inner-fast">
+        <div class="booking-content">
+            <div class="icon-fast">
+                <span><i class="fas fa-star"></i></span>
+            </div>
+            <div class="inner-fast-text">
+                <p>A TaxiZone opera em várias cidades, oferecendo soluções de transporte adaptadas às necessidades dos nossos clientes, incluindo serviços de táxi, transporte executivo, entregas rápidas e muito mais.</p>
+            
+            </div>
+                
+        </div>
+        <div class="booking-content">
+            <div class="icon-fast">
+                <span><i class="fas fa-map-marker-alt"></i></span>
+            </div>
+            <div class="inner-fast-text">
+                <p>Nossa missão é transformar cada viagem em uma experiência agradável e confiável, seja para trajetos curtos ou longas distâncias.</p>
+            </div>
+        </div>
+        <div class="booking-content">
+            <div class="icon-fast">
+                <span><i class="fas fa-map-marker-alt"></i></span>
+            </div>
+            <div class="inner-fast-text">
+                <p>Entrega rápida e segura de documentos e pequenas encomendas, disponível 24 horas por dia, 7 dias por semana.</p>
+            
+            </div>
+        </div>
+        <div class="booking-content">
+            <div class="icon-fast">
+                <span><i class="fas fa-map-marker-alt"></i></span>
+            </div>
+            <div class="inner-fast-text">
+                <p>Transporte executivo com motoristas profissionais para viagens de negócios, eventos e compromissos importantes.</p>
+            
+            </div>
+        </div>
+    </div>
+</div>
+        <footer id ="CONTACTOS">
+            <div>
+                <h3>CONTACTOS
+                    <p>Endereço: Luanda, Kilamba Kiaxi, Nova Vida, Rua 49, Edifício 76</p>
+                    <p>Telefone: 931042124 / 952704085</p>
+                    <p>Email: taxizone@gmail.com</p>
+                </h3>
+            </div>
+        </footer>
+</html>
